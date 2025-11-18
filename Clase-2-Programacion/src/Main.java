@@ -5,7 +5,6 @@ public class Main {
         System.out.print("Tercera linea");
         System.out.print("Cuarta linea");
 
-
     }
     public void nombreMetodo(){
 
