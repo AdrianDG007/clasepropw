@@ -4,7 +4,7 @@
  */
 public class Main {
 //Este comentario es solo de una linea->ANOTACION O ACLARACION BREVE de lo que hace el metodo
-    
+
 String nombreMio ="Borja completo clase";
 
     /**
