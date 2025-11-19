@@ -40,7 +40,7 @@ public class Operadores {
         //operadorUno = operadorUno +5;
         operadorUno +=5;// en operadorUno guarda la suma de lo que valia operdaorUno + 5
         operadorUno +=15;
-        System.out.println("El valor de operador");
+        System.out.println("El valor de operador 1 es "+operadorUno);
 
 
    }
