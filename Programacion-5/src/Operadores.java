@@ -53,6 +53,6 @@ public class Operadores {
             System.out.println("Has cobrado un base de: "+salarioBase);
             System.out.println("Has cobrado un extrad de: "+salarioBaseExtra);
             // ne caso contrario
-        salarioBase = 40*salaraioBaseHora; 
+        salarioBase = 40*salaraioBaseHora;
     }
 }
