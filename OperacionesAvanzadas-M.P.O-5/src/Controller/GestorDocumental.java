@@ -8,8 +8,8 @@ public class GestorDocumental {
         System.out.println("Envidando documetno para correo"+correo);
         //logica de como se hace un envio de correo
     }
-    private void clasificarDocumento{
-        
+    private void clasificarDocumento(){
+
     }
     public void  archivarDocumento(String documento){
         System.out.println("Archivando documento");
