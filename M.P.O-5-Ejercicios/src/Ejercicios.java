@@ -40,7 +40,7 @@ public class Ejercicios {
         String centenas = String.valueOf(numeroPalabra.charAt(2));
         String decenas = String.valueOf(numeroPalabra.charAt(3));
         String unidades = String.valueOf(numeroPalabra.charAt(4));
-        
+
         */
     }
 }
