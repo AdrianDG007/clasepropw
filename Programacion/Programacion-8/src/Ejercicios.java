@@ -167,7 +167,7 @@ public class Ejercicios {
         System.out.println("El precio de la pizza es " + precipoPizza);
         System.out.println("Los ingredientes de la pizza son " + ingredinetesString);
     }
-    
+
 }
 
 
