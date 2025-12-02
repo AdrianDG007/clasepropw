@@ -81,7 +81,7 @@ public class Main {
         int nota = 5;
         String resultado = nota < 5 ? "suspesno" : "aprobado";
         char letraNota = nota < 5 ? 'A' : 'P';
-        
+
 
     }
 }
