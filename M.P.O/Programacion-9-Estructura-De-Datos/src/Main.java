@@ -55,5 +55,22 @@ public class Main {
         }
         // el sumatorio de todos los numeros del array
         System.out.println("El sumaotrio de los numeros es " + sumatorio);
+        // [3,4,12,43,6,76,32]
+        // Eliminar un elemento del array
+        System.out.println("Imprimiendo palabras");
+        //String [] palabras = new String []{"Hola","Adios","Juego", "Programacion"};
+        String  [] palabras = new  String[]{null,null,"hola",null,"hola"};
+        //null null null null null
+        /*
+         for (String item : palabras) {
+            System.out.println(item);
+        }*/
+        // System.out.println("La palabra aleatoria es: " + palabras [(int) (Math.random()* palabras.length)]);
+        // quiero saber si la palabra hola este en el array
+        for (String item : palabras){
+            if (item != null && item.equals("hola")){
+            System.out.println("Encontrado");}
+
+        }
     }
 }
