@@ -1,53 +1,36 @@
 public class Main {
+
     public static void main(String[] args) {
-        //Autobox
-        Integer numeroComplejo = 100;
-        //Unbox
-        int numeroPrimitivo = numeroComplejo;
-
-        //OPERADORES
-        // aritmeticos; + - * / %
-        // asignacion; = =+ =- =* =/ =%
-        // relacionales; < <= == > >= !=
-        //logicos; || && !
-        int numero1 = 5;
-        int numero2 = 6;
-        int resultado = 5&6;
-        System.out.println("El resultado de la operacion & es " + resultado);
-
-        numero1 = 12;
-        numero2 = 13;
-        resultado = numero1| numero2;
-        System.out.println("El resultado de la comparacion | es " + resultado);
-
-        numero1 = 23;
-        numero1 = 25;
-        String palabra =  null;
-        boolean resultadoBool = numero1>numero1 || numero2<100 || numero1 ==0 || palabra.length()!=0;
-        //                          F || T
-        System.out.println("El resultado de la comparacin es " + resultadoBool);
-
-        resultadoBool = numero1>=numero1 && numero2<100 && numero1 ==23 && palabra.length()!=0;
-
-        System.out.println("El resultado de la comparacin es " + resultadoBool);
-        // System.out.println(palabra.length()); // NullPointerException
-        // CASTEO ->cmabiar el tipo temporalmetne (tipo)variable
-        char letra = 123;
-        System.out.println("La letra es "+(char) 67);
-        int letraNuemro = 'A';
-        System.out.println("El caracter asociado a la letra A es "+letraNuemro);
-        String frase = "Esta frase la vamos a codificar";
-        for (int i = 0; i < frase.length(); i++) {
-            char letraPalabra =frase.charAt(i);
-            //System.out.println(i);
-            int codigo = letraPalabra;
-            if (i % 2 == 0) {
-                codigo*=2;
-            } else {
-                codigo*=4;
+        Operaciones operaciones = new Operaciones();
+        // Evaluar el dai de la smeana y si es laborable o no es alborable
+        DiasSemanas diaSemana = DiasSemanas.Viernes ;
+        //solo funciona si tengo un level de 14 o >
+        switch (diaSemana){
+            case Lunes,Martes,Miercoles,Jueves -> System.out.println("Laborable ");
+            case Viernes -> System.out.println("Laborable, casi lo tenemos ");
+            case Sabado, Domingo -> System.out.println("Descasnos");
+        }
+        MesesAnio mesActual = MesesAnio.Febrero;
+        //System.out.println("La fecha de hoy  es 27 de " + MesesAnio.Noviembre+"de 2025 y es " + DiasSemanas.Jueves);
+        System.out.printf("La fecha de hoy es %d de %s de %d y es %s estamos en la estacion de %s, los dias que tiene este mes son %d%n"
+                ,7 ,MesesAnio.Noviembre, 2025, DiasSemanas.Jueves,MesesAnio.Noviembre.estacion,MesesAnio.Noviembre.diasMes);
+        int numero = 12;
+        // 0 nuermo 10
+        // 10 numero 20
+        // 20 numero 30
+        // if nuermo >= 0 && numero < 10
+        // else if nuermo >= 10 && nuermo < 20
+        // else if numero > = 200 && nuermo < 30
+        /*final int NUMERO = 12;
+        switch (true){
+            case (NUMERO >= 0 && NUMERO < 10) ->{
+                System.out.println("23123");
             }
-            System.out.print(codigo+" ");
-
+            case (NUMERO > 10 && NUMERO < 20) ->{
+                System.out.println("23123");
+            }
+         */
+        operaciones.evaluarServidor("ok");
         }
     }
-}
+
