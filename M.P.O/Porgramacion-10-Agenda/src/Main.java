@@ -2,17 +2,22 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String [] args) {
-        /*Scanner scanner = new Scanner(System.in);
+         /*Scanner scanner = new Scanner(System.in);
         System.out.println("Dime el nombre de la persona");
-        String  nombre = scanner.next();
+        String  nombre = scanner.next ();
         System.out.println("Dime el apellido de la persona");
-        String  apellido = scanner.next();
+        String  apellido = scanner.next ();
         System.out.println("Dime el correo de la persona");
-        String  correo = scanner.next();
+        String  correo = scanner.next ();
         System.out.println("Dime el telefono de la persona");
-        int telefono = scanner.nextInt();
+        int telefono = scanner.nextInt ();
         // nombre, apellido, correo, telefono
-        Object [] persona1 = new Object[]{nombre,apellido,correo,telefono};
+        Object [] persona1 = new Object [] {nombre,apellido,correo,telefono};
+        Objecto [] [] personas new Objtec [] []
+        System.out.println (2los datos del usuario son:");
+        for ( Object item : persona1 ) {
+            System.out println(item);
+          */
         Object [] persona2 = new Object[]{"borja1","martin1","borja1@gmail.com",234};
         System.out.println("Los datos del usuario son: ");
         for ( Object item : persona1 ){
