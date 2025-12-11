@@ -12,14 +12,15 @@ public class Main {
             int aletorio = (int) (Math.random () * 20) + 1;
             numeros [i] = aletorio;
         }
-        for (int item : numeros) {
+        /*for (int item : numeros) {
             System.out.print (item + " ");
-        }
+        }*/
         do {
             System.out.println ("1 - Imprimir el array");
             System.out.println ("2 - mover a izquierda");
             System.out.println ("3 - mover a ddercha");
             System.out.println ("4 - inverir ");
+            System.out.println ("5 - rotar por pares");
             System.out.println ("Que opcion quiieres hacer");
             opcion = scanner.nextInt ();
             switch (opcion) {
@@ -31,10 +32,10 @@ public class Main {
                 }
                 case 2 -> {
                     int temporal = numeros [0];
-                    for (int i = 0; i < numeros.length-1; i++) {
+                    for (int i = 0; i < numeros.length - 1; i++) {
                         numeros [i] = numeros [i + 1];
                     }
-                    numeros [numeros.length-1] = temporal;
+                    numeros [numeros.length - 1] = temporal;
                 }
                 case 3 -> {
                     int temporal = numeros [numeros.length-1];
@@ -46,11 +47,24 @@ public class Main {
                 case 4 -> {
                     for (int i = 0; i < numeros.length / 2; i++) {
                         int temporal = numeros [i];
-                        numeros [i] = numeros [numeros.length - 1];
-                        numeros [numeros.length - 1] = temporal ;
+                        numeros [i] = numeros [numeros.length - 1 - i];
+                        numeros [numeros.length - 1 - i] = temporal ;
+                    }
+                }
+                case 5 ->{
+                    int recorrido;
+                    if (numeros.length % 2 != 0){
+                        recorrido = numeros.length - 1;
+                    }else{
+                        recorrido = numeros.length;
+                    }
+                   for (int i = 0; i < recorrido; i+= 2) {
+                        int temp = numeros [i];
+                        numeros [i] = numeros[i + 1];
+                        numeros [i + 1] = temp;
                     }
                 }
             }
-        } while (opcion != 5);
+        } while (opcion != 6);
     }
 }
