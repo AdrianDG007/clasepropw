@@ -25,7 +25,6 @@ public class Main {
         imprimiendobombo(bomobo1);
         System.out.println("Imprimiendo bombo 2");
         imprimiendobombo(bomobo2);
-        
     }
     public static void imprimiendobombo (String [] bombo) {
         for (String item : bombo) {
