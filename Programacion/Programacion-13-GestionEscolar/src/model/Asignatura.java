@@ -17,6 +17,6 @@ public class Asignatura {
     }
     public void mostrarDatos () {
         System.out.println("id. " + id );
-        System.out.println("Calificación: " +calificaicon);
+        System.out.println("Calificación: " + calificaicon);
     }
 }
