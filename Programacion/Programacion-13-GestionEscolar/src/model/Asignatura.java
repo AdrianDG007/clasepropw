@@ -1,22 +1,21 @@
 package model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
-@NoArgsConstructor
 @AllArgsConstructor
-
+@NoArgsConstructor
+@Data
 public class Asignatura {
-    private int id;
-    private double calificaicon;
 
+    private int id;
+    private double calificacion;
     public Asignatura(int id) {
         this.id = id;
     }
-    public void mostrarDatos () {
-        System.out.println("id. " + id );
-        System.out.println("Calificación: " + calificaicon);
+
+    public void mostrarDatos(){
+        System.out.println("id: "+id);
+        System.out.println("calificacion: "+calificacion);
     }
+
 }
