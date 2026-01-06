@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 public class Profesor {
     // si no escribo ningun constructor, el por defecto esta aqui
     public void ponerNotas(Alumno alumno){
-        alumnoz.getAsignatura1().setCalificacion((Math.random()*10)+0.1);
+        alumno.getAsignatura1().setCalificacion((Math.random()*10)+0.1);
         alumno.getAsignatura2().setCalificacion((Math.random()*10)+0.1);
         alumno.getAsignatura3().setCalificacion((Math.random()*10)+0.1);
     }

@@ -1,35 +1,31 @@
 import controller.CampeonatoController;
-import model.*;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main (String [] args) {
+        Scanner scanner = new Scanner (System.in);
+        int opcion = 0;
+        // Punto de entrada de la aplicación
 
-        System.out.print("Número de coches: ");
-        int nCoches = sc.nextInt();
-        sc.nextLine();
+        do {
+            System.out.println ("Bienvenidos a al Campeonato de Coches:");
+            System.out.println ("1- !Creemos un Campeonato!");
+            System.out.println ("2- Abandonar el Campeonato.");
+            System.out.println ();
+            opcion = scanner.nextInt ();
+            switch (opcion) {
+                case 1 -> {
+                    CampeonatoController campeonatoController = new CampeonatoController ();
+                    campeonatoController.ejecutarCampeonato ();
 
-        List<Coche> coches = new ArrayList<>();
+                }
+                case 2 -> {
+                    System.out.println ("Saliendo del campeonato.....");
+                }
+            }
+        }while (opcion != 2);
 
-        for (int i = 0; i < nCoches; i++) {
-            System.out.print("Nombre coche: ");
-            String nombre = sc.next();
-            coches.add(new Coche(nombre, "Marca", "Modelo"));
-        }
-
-        System.out.print("Número de carreras: ");
-        int nCarreras = sc.nextInt();
-
-        List<Carrera> carreras = new ArrayList<>();
-        for (int i = 0; i < nCarreras; i++) {
-            System.out.print("Km carrera " + (i+1) + ": ");
-            carreras.add(new Carrera(sc.nextInt(), coches));
-        }
-
-        Campeonato campeonato = new Campeonato(carreras, coches);
-        new CampeonatoController().ejecutarCampeonato(campeonato);
     }
 }

@@ -7,40 +7,71 @@ import java.util.*;
 
 public class CarreraController {
 
-    private static final Random random = new Random();
+    private List <Coche> coches;
+    private Scanner scanner;
+    private Random random;
 
-    public void simularCarrera(Carrera carrera) {
-        boolean terminada = false;
+    // CONSTRUCTOR → crea los coches
+    public CarreraController () {
+        scanner = new Scanner (System.in);
+        coches = new ArrayList <> ();
 
-        while (!terminada) {
-            for (Coche c : carrera.getParticipantes()) {
-                c.avanzar(20 + random.nextInt(31)); // 20-50
-                if (c.getKmRecorridos() >= carrera.getKmObjetivo()) {
-                    terminada = true;
+        crearCoches ();
+    }
+
+    private void crearCoches () {
+        System.out.print ("Número de coches: ");
+        int n = scanner.nextInt ();
+        scanner.nextLine ();
+
+        for (int i = 0; i < n; i++) {
+            System.out.print ("Nombre del piloto " + (i + 1) + ":");
+            String nombre = scanner.nextLine ();
+            System.out.print ("Nombre de la marca:");
+            String marca = scanner.nextLine ();
+            System.out.print ("Nombre del modelo:");
+            String modelo = scanner.nextLine ();
+            coches.add ( new Coche (nombre, marca, modelo) );
+        }
+    }
+
+    public void simularCarrera (Carrera carrera) {
+        boolean fin = false;
+
+        while (!fin) {
+            for ( Coche c : carrera.getCoches () ) {
+                c.avanzar ( (int) (Math.random () * 31) );
+                if ( c.getKm () >= carrera.getKmObjetivo () ) {
+                    fin = true;
                 }
             }
         }
 
-        carrera.getParticipantes().sort(
-                Comparator.comparingInt(Coche::getKmRecorridos).reversed()
+        carrera.getCoches ().sort (
+                Comparator.comparingInt (Coche::getKm).reversed ()
         );
 
-        asignarPuntos(carrera.getParticipantes());
-        mostrarResultados(carrera.getParticipantes());
+        asignarPuntos (carrera.getCoches ());
+        mostrarPodio  (carrera.getCoches ());
     }
 
-    private void asignarPuntos(List<Coche> coches) {
-        int[] puntos = {10, 8, 6};
-        for (int i = 0; i < coches.size() && i < 3; i++) {
-            coches.get(i).sumarPuntos(puntos[i]);
+    private void asignarPuntos(List <Coche> lista) {
+        int [] puntos = { 10, 9, 8, 7, 6, 5, 4, 3 , 2, 1};
+        for (int i = 0; i < lista.size () && i < 10; i++) {
+            lista.get (i) .sumarPuntos ( puntos [i] );
         }
     }
 
-    private void mostrarResultados(List<Coche> coches) {
-        System.out.println("=== RESULTADOS CARRERA ===");
-        for (int i = 0; i < coches.size(); i++) {
-            System.out.println((i+1) + "º - " + coches.get(i).getNombre()
-                    + " [" + coches.get(i).getPuntos() + " puntos totales]");
+    private void mostrarPodio(List<Coche> lista) {
+        System.out.println("Puntos:");
+        for (int i = 0; i < Math.min (3, lista.size () ); i++) {
+            System.out.println( (i + 1) + "º - " +
+                    lista.get (i).getNombre () +
+                    " " + lista.get (i).getPuntos () + " puntos");
         }
+    }
+
+    public List<Coche> getCoches() {
+        return coches;
     }
 }

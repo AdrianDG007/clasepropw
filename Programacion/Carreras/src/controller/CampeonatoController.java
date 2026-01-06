@@ -1,34 +1,64 @@
 package controller;
 
+import lombok.*;
 import model.*;
 
-import java.util.Comparator;
+import java.util.*;
 
 public class CampeonatoController {
 
-    private CarreraController carreraController = new CarreraController();
+    private Campeonato campeonato;
+    private CarreraController carreraController;
+    private Scanner scanner;
 
-    public void ejecutarCampeonato(Campeonato campeonato) {
-        int numCarrera = 1;
+    // CONSTRUCTOR → crea carreras y campeonato
+    public CampeonatoController () {
+        scanner = new Scanner (System.in);
+        carreraController = new CarreraController ();
 
-        for (Carrera carrera : campeonato.getCarreras()) {
-            System.out.println("\n=== CARRERA " + numCarrera++ + " ===");
+        crearCampeonato ();
+    }
 
-            campeonato.getCoches().forEach(Coche::resetKm);
-            carreraController.simularCarrera(carrera);
-            mostrarClasificacion(campeonato);
+    private void crearCampeonato () {
+        System.out.print ("Número de carreras: ");
+        int n = scanner.nextInt ();
+
+        List <Carrera> carreras = new ArrayList <> ();
+
+        for (int i = 0; i < n; i++) {
+            System.out.print ("Km de la carrera " + (i + 1) + ": ");
+            int km = scanner.nextInt ();
+            carreras.add ( new Carrera (km, carreraController.getCoches () ) );
+        }
+
+        campeonato = new Campeonato (carreras, carreraController.getCoches () );
+    }
+
+    public void ejecutarCampeonato () {
+        int num = 1;
+
+        for (Carrera carrera : campeonato.getCarreras () ) {
+            System.out.println ("\n=== CARRERA " + num + "===");
+
+            campeonato.getCoches ().forEach (Coche :: resetKm);
+            carreraController.simularCarrera (carrera);
+            mostrarClasificacion ();
+
+            num++;
         }
     }
 
-    private void mostrarClasificacion(Campeonato campeonato) {
-        campeonato.getCoches().sort(
-                Comparator.comparingInt(Coche::getPuntos).reversed()
+    private void mostrarClasificacion () {
+        campeonato.getCoches ().sort (
+                Comparator.comparingInt (Coche::getPuntos).reversed ()
         );
 
-        System.out.println("\n=== CLASIFICACIÓN GENERAL ===");
-        for (int i = 0; i < campeonato.getCoches().size(); i++) {
-            Coche c = campeonato.getCoches().get(i);
-            System.out.println((i+1) + "º " + c.getNombre() + " - " + c.getPuntos() + " puntos");
+        System.out.println ("\nPodio:");
+        for (int i = 0; i < campeonato.getCoches ().size (); i++) {
+            Coche c = campeonato.getCoches ().get (i);
+            System.out.println ( (i + 1) + "º " +
+                    c.getNombre () + " - " +
+                    c.getPuntos () + " puntos");
         }
     }
 }

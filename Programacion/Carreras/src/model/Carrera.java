@@ -4,13 +4,18 @@ import java.util.List;
 
 public class Carrera {
     private int kmObjetivo;
-    private List<Coche> participantes;
+    private List<Coche> coches;
 
-    public Carrera(int kmObjetivo, List<Coche> participantes) {
+    public Carrera(int kmObjetivo, List<Coche> coches) {
         this.kmObjetivo = kmObjetivo;
-        this.participantes = participantes;
+        this.coches = coches;
     }
 
-    public int getKmObjetivo() { return kmObjetivo; }
-    public List<Coche> getParticipantes() { return participantes; }
+    public int getKmObjetivo() {
+        return kmObjetivo;
+    }
+
+    public List<Coche> getCoches() {
+        return coches;
+    }
 }
