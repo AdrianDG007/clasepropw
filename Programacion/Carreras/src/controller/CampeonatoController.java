@@ -27,7 +27,7 @@ public class CampeonatoController {
         for (int i = 0; i < n; i++) {
             System.out.print ("Km de la carrera " + (i + 1) + ": ");
             int km = scanner.nextInt ();
-            carreras.add ( new Carrera ( km, carreraController.getCoches () ) );
+            boolean add = carreras.add(new Carrera(km, carreraController.getCoches()));
         }
 
         campeonato = new Campeonato ( carreras, carreraController.getCoches () );
