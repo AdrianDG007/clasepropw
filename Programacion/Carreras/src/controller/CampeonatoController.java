@@ -22,15 +22,15 @@ public class CampeonatoController {
         System.out.print ("Número de carreras: ");
         int n = scanner.nextInt ();
 
-        List <Carrera> carreras = new ArrayList <> ();
+        ArrayList <Carrera> carreras = new ArrayList <> ();
 
         for (int i = 0; i < n; i++) {
             System.out.print ("Km de la carrera " + (i + 1) + ": ");
             int km = scanner.nextInt ();
-            carreras.add ( new Carrera (km, carreraController.getCoches () ) );
+            carreras.add ( new Carrera ( km, carreraController.getCoches () ) );
         }
 
-        campeonato = new Campeonato (carreras, carreraController.getCoches () );
+        campeonato = new Campeonato ( carreras, carreraController.getCoches () );
     }
 
     public void ejecutarCampeonato () {

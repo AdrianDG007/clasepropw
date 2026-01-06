@@ -6,8 +6,7 @@ import model.Coche;
 import java.util.*;
 
 public class CarreraController {
-
-    private List <Coche> coches;
+    private ArrayList <Coche> coches;
     private Scanner scanner;
     private Random random;
 
@@ -50,8 +49,8 @@ public class CarreraController {
                 Comparator.comparingInt (Coche::getKm).reversed ()
         );
 
-        asignarPuntos (carrera.getCoches ());
-        mostrarPodio  (carrera.getCoches ());
+        asignarPuntos ( carrera.getCoches () );
+        mostrarPodio  ( ( ArrayList <Coche> ) carrera.getCoches () );
     }
 
     private void asignarPuntos(List <Coche> lista) {
@@ -61,9 +60,9 @@ public class CarreraController {
         }
     }
 
-    private void mostrarPodio(List<Coche> lista) {
+    private void mostrarPodio(ArrayList<Coche> lista) {
         System.out.println("Puntos:");
-        for (int i = 0; i < Math.min (3, lista.size () ); i++) {
+        for (int i = 0; i < Math.min ( 3, lista.size () ); i++) {
             System.out.println( (i + 1) + "º - " +
                     lista.get (i).getNombre () +
                     " " + lista.get (i).getPuntos () + " puntos");
