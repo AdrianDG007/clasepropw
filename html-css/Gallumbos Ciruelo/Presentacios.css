@@ -19,9 +19,24 @@ header{
 }
 .logo {
     display: flex;
+    align-self: start;
     height: 10rem;
     width: 10rem;
     margin-top: 0.3em;   
+}
+
+.titulo{
+    display:flex;
+    justify-content:center;
+    font-style: var(--second-font);
+    margin:0;
+    padding-bottom: 0.3em;   
+}
+.eslogan{
+    display:flex;
+    justify-content:center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;    
 }
 .info{
     display: flex;
@@ -30,15 +45,9 @@ header{
     justify-content: center;
     flex:1;
 }
-.titulo{
-    display:flex;
-    justify-content:center;
-    font-style: var(--second-font);
-    margin:0;
-    padding-bottom: 0.3em;   
-}
 nav{
     display: flex;
+    font-size: 1em;
     flex-direction: column;
     padding-top: 2em;    
 }
