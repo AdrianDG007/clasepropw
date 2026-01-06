@@ -11,7 +11,6 @@ public class CampeonatoController {
     private CarreraController carreraController;
     private Scanner scanner;
 
-    // CONSTRUCTOR → crea carreras y campeonato
     public CampeonatoController () {
         scanner = new Scanner (System.in);
         carreraController = new CarreraController ();

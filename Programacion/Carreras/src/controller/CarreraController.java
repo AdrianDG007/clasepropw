@@ -11,7 +11,6 @@ public class CarreraController {
     private Scanner scanner;
     private Random random;
 
-    // CONSTRUCTOR → crea los coches
     public CarreraController () {
         scanner = new Scanner (System.in);
         coches = new ArrayList <> ();
