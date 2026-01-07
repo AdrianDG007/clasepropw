@@ -1,403 +1,312 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-:root {
-    --Primary-color:rgb(207, 212, 255);
-    --Secondary-color:rgb(52, 70, 231);
-    --Terciary-color: rgb(74, 56, 103);
-    --Primary-background: rgb(248, 246, 233);
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-header{
-    background-color: rgb(51, 53, 70);
-    display: flex;
-    height: 10.5em;
-    padding: 10px;
-    color: var(--Primary-color);    
-}
-.logo {
-    display: flex;
-    align-self: start;
-    height: 10rem;
-    width: 10rem;
-    margin-top: 0.3em;   
-}
-.titulo{
-    display:flex;
-    justify-content:center;
-    font-style: var(--second-font);
-    margin:0;
-    padding-bottom: 0.3em;   
-}
-.eslogan{
-    display:flex;
-    justify-content:center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2em;    
-}
-.info{
-    display: flex;
-    margin: 0 0 0.5em 0;
-    flex-direction:column;
-    justify-content: center;
-    flex:1;
-}
-nav{
-    display: flex;
-    font-size: 1em;
-    flex-direction: column;
-    padding-top: 2em;    
-}
-nav ul{
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-a{
-    text-decoration: none;
-    color: var(--Primary-color);
-    font-size: 1.5em;
-    font-family: 'Roboto', sans-serif;
-}
-a:hover {
-    color: #5921bb;
-}
-#hero{
-    background-color: var(--Primary-background);
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-content: start;
-    align-items: center;
-    height: 1250px;
-    color:var(--Secondary-color);
-}
-.frase {
-    font-size: 6em;
-    font-weight: 900;
-    text-align: center;
-}
-#hero > img{
-    display:grid;
-    grid-area: 2 /0/0/ 3;
-    height:auto;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    justify-self: center;
-    object-fit: contain;
-}
-main{
-    background-color: var(--Primary-background);
-}
-#sobre-mi{
-    display: grid;
-    grid-template-columns: 
-        minmax(2rem, 10%) 
-        repeat(2, 0.7fr) 
-        repeat(2, 0.35fr) 
-        repeat(2, 0.7fr) 
-        minmax(2rem, 10%);
-    grid-template-rows:10% repeat(3,20%) 10%;
-    height: 1650px;
-}
-.yo{
-    display: grid;
-    grid-row:2 / 5 ;
-    grid-column: 2 / 4;
-    border-radius: 100px;
-    height: 100%;
-    width: 100%;
-}
-.descripcion{
-    display: grid;
-    grid-row: 2 / 5;
-    grid-column: 6 / 8;
-}
-.name{
-    display: grid;
-    font-family: 'Playfair Display', serif;
-    font-size: 4.346em;
-    height: 69%;
-    align-items: center;   
-    color: var(--Terciary-color);
-}
-.sobre-mi > article > p{
-    display: grid;
-    font-size: 1.8em;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-    color: var(--Terciary-color);
-}
-#proyectos{
-    display: grid;
-    background-color: var(--Primary-background);
-    grid-template-rows: 
-        minmax(2rem, 10%)
-        repeat(3, 18%) 
-        minmax(2rem, 18%);
-    grid-template-columns:
-        minmax(2rem, 10%) 
-        repeat(4, 20%) 
-        minmax(2rem, 10%);
-    height: 1600px;
-    gap: 1em;
-}
-#proyectos > h2{
-    display: grid;
-    grid-area: 1 / 2 / 2 / 6;
-    align-items: center;    
-    justify-content: center;
-    font-size: 4rem;
-    color: var(--Terciary-color);
-}
-#proyectos > article > p{
-    font-size: 0.7em;
-    font-family: 'Roboto', sans-serif;
-    color: var(--Terciary-color);
-    text-align: center;
-}
-#proyectos > article > h3{
-    font-size: 1.25em;
-    font-family: 'Playfair Display', serif;
-    color: var(--Terciary-color);
-}
-.proyecto-1 {
-  grid-row: 2 / 4;
-  grid-column: 2 / 4;
-  background: white;
-  border-radius: 20px;
-  padding: 0.5em;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.773);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-.img-pro-1{
-    display: grid;
-    object-fit:fill;
-    height: 87%;
-    width: 87%;
-    border-radius: 50px;
-}
-.proyecto-2{
-    grid-row: 2/4;
-    grid-column: 4/6;
-    background-color: white;
-    border-radius: 20px;
-    padding: 0.5em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.773);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-.img-pro-2{
-    object-fit: grid;
-    object-fit:fill;
-    height: 87%;
-    width: 87%;
-    border-radius: 50px;
-}
-.proyecto-3{
-    grid-row: 4/6;
-    grid-column:2/4;
-    background-color: white;
-    border-radius: 20px;
-    padding: 0.5em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.773);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-.img-pro-3{
-    display: grid;
-    object-fit:unset;
-    height: 87%;
-    width: 87%;
-    border-radius: 50px;
-}
-.proyecto-4 {
-    grid-row: 4/6;
-    grid-column:4/6;
-    background-color: white;
-    border-radius: 20px;
-    padding: 0.5em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.773);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-.img-pro-4{
-    display: grid;
-    object-fit:fill;
-    height: 87%;
-    width: 87%;
-    border-radius: 50px;
-}
-#inscripcion{
-    display: grid;
-    background-color: var(--Primary-background);
-    flex: 1;
-    grid-template-rows: 
-        minmax(2rem, 10%)
-        repeat(2, 18%) 
-        minmax(2rem, 18%);
-    grid-template-columns:
-        minmax(2rem, 25.43%) 
-        repeat(2, 20%) 
-        minmax(2rem, 30%);
-    height: 1250px;
-    gap: 1em;
-        display: grid;
-    font-size: 1.5em;
-    align-items: center;
-    font-family: 'Playfair Display', serif;
-    color: var(--Terciary-color);
-}
-#inscripcion > h2{
-    display: grid;
-    grid-area: 1 / 1 / 2 / 5;
-    align-items: center;    
-    justify-content: center;
-    font-size: 3rem;
-    color: var(--Terciary-color);
-}
-.formulario{
-    background-color: white;
-    grid-row: 2 / 4;
-    grid-column: 2 / 4;
-    border-radius: 20px;
-    padding: 1em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.773);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-}
-button{
-    background-color: var(--Terciary-color);
-    color: var(--Primary-color);
-    border: none;
-    border-radius: 10px;
-    padding: 0.5em 1em;
-    font-size: 1em;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-button:hover {
-  background-color: #5921bb;
-}
-footer{
-    background-color: rgb(51, 53, 70);
-    color: var(--Primary-color);
-    text-align: center;
-    padding: 2em;
-    font-family: 'Roboto', sans-serif;
-}
-@media (max-width: 1024px) {
-  header {
-    flex-direction: column;
-    height: auto;
-    text-align: center;
-  }
-  nav ul {
-    flex-wrap: wrap;
-    gap: 0.5em;
-  }
-  #hero {
-    flex-direction: column;
-    text-align: center;
-  }
-  .frase {
-    font-size: 3em;
-  }
-  #sobre-mi {
-    grid-template-columns: 1fr;
-    height: auto;
-    padding: 2em;
-  }
-  .yo {
-    width: 80%;
-    height: auto;
-    justify-self: center;
-  }
-  .descripcion {
-    grid-column: 1 / -1;
-    text-align: center;
-  }
-  #proyectos {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    height: auto;
-    padding: 2em;
-  }
-  #inscripcion {
-    grid-template-columns: 1fr;
-    height: auto;
-    padding: 2em;
-  }
-  .formulario {
-    width: 100%;
-  }
-}
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-  .logo {
-    height: 7rem;
-    width: 7rem;
-  }
-  a {
-    font-size: 1.1em;
-  }
-  .frase {
-    font-size: 2.2em;
-  }
-  #hero img {
-    max-width: 90%;
-  }
-  .name {
-    font-size: 2.5em;
-  }
-  #proyectos > h2,
-  #inscripcion > h2 {
-    font-size: 2em;
-  }
-  footer {
-    font-size: 0.9em;
-  }
-}
-@media (max-width: 768px) {
-  #inscripcion {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: auto;
-    padding: 2em 1em;
-  }
-  #inscripcion > h2 {
-    font-size: 2rem;         
-    text-align: center;      
-    word-wrap: break-word;   
-    margin-bottom: 1em;
-  }
-  .formulario {
-    grid-column: 1 / -1;     
-    width: 100%;
-    padding: 1.5em;
-  }
-  .formulario label,
-  .formulario input,
-  .formulario button {
-    width: 100%;
-  }
-}
+    @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    /* Enrrutamos las variables principales de CSS haciendo una buena practica y facilitando las futuras modificaciones */
+    :root {
+        --Primary-color: rgb(207, 212, 255);
+        /* texto en claro */
+        --Secondary-color: rgb(104, 22, 185);
+        /* morado intermedio */
+        --Terciary-color: rgb(74, 56, 103);
+        /* morado oscuro */
+        --Primary-background: rgb(248, 246, 233);
+
+        /* Los espacios de cada elemento permition mejor escalavilidad*/
+        --gap-small: 0.5em;
+        --gap-medium: 1em;
+        --gap-large: 2em;
+        --padding-section: 3em;
+    }
+
+    /* Reset de estilos para la mejor personalización */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* Centrado de h */
+    h1, h2 {
+        text-align: center;
+    }
+
+    /* Las especificaciones de la cabecera */
+    header {
+        background-color: var(--Terciary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--gap-medium) var(--gap-large);
+        color: var(--Primary-color);
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: var(--gap-medium);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Tamaño y estilo del titulo*/
+    header h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5em;
+    }
+
+    .eslogan {
+        font-style: italic;
+        font-size: 1.2em;
+    }
+
+    /* Las especificaciones de la navegación */
+    nav {
+        background-color: var(--Terciary-color);
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        gap: var(--gap-large);
+        padding: var(--gap-medium) 0;
+
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--Primary-color);
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: rgb(240, 222, 84);
+    }
+
+    /* La colocalcion de los elementos junto a los espacios y fuentes de inicio y sus titulos*/
+    .inicio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: var(--padding-section) 2em;
+        background-color: var(--Primary-background);
+        color: var(--Secondary-color);
+    }
+
+    .inicio h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3em;
+        margin-bottom: var(--gap-medium);
+    }
+
+    .inicio p {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5em;
+        margin-bottom: var(--gap-large);
+    }
+
+    /* Estructuración de todas las secciones del sobre nosotros */
+    #sobre-nosotros {
+        padding: var(--padding-section) 2em;
+        text-align: center;
+        background-color: var(--Primary-background);
+
+    }
+
+    #sobre-nosotros h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5em;
+        color: var(--Terciary-color);
+        margin-bottom: var(--gap-medium);
+    }
+
+    #sobre-nosotros p {
+        font-size: 1.2em;
+        color: var(--Terciary-color);
+        max-width: 800px;
+        margin: auto;
+    }
+
+    /* Las especificaciones de la sección Productos */
+    #productos > h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5em;
+        color: var(--Terciary-color);
+        margin-bottom: var(--gap-large);
+    }
+    main {
+        background-color: var(--Primary-background);
+    }
+    .productos-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* esto permite que los productos se centren en las pantallas mas pequeñas como móviles, tablets etc..*/
+        gap: var(--gap-large);
+        padding: var(--gap-large);
+    }
+
+    .producto {
+        background-color: white;
+        border-radius: 15px;
+        padding: var(--gap-medium);
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: var(--gap-medium);
+    }
+
+    .producto h3 {
+        font-family: 'Playfair Display', serif;
+        color: var(--Terciary-color);
+        margin-bottom: var(--gap-small);
+    }
+
+    .producto p {
+        color: var(--Terciary-color);
+        margin-bottom: var(--gap-small);
+    }
+
+    .precio {
+        font-weight: bold;
+        color: var(--Secondary-color);
+    }
+
+    /* Especificaciones de la Sección Destacada */
+    .destacada {
+        background-color: rgb(230, 200, 255);
+        border: 2px solid var(--Secondary-color);
+        margin: var(--padding-section) 2em;
+        padding: var(--gap-large);
+        text-align: center;
+        border-radius: 15px;
+        color: var(--Terciary-color);
+    }
+
+    /* Estructuracion y forma del Formulario */
+    #contacto {
+        padding: var(--padding-section) 2em;
+    }
+
+    #contacto h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5em;
+        color: var(--Terciary-color);
+        margin-bottom: var(--gap-medium);
+    }
+
+    form {
+        background-color: white;
+        max-width: 600px;
+        margin: auto;
+        padding: var(--gap-large);
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-medium);
+    }
+
+    input, select, textarea {
+        padding: 0.8em;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+        width: 100%;
+    }
+
+    button {
+        background-color: var(--Terciary-color);
+        color: var(--Primary-color);
+        border: none;
+        border-radius: 10px;
+        padding: 0.8em 1em;
+        font-size: 1em;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: var(--Secondary-color);
+    }
+
+    /* Footer */
+    footer {
+        background-color: var(--Terciary-color);
+        color: var(--Primary-color);
+        text-align: center;
+        padding: var(--gap-large);
+        font-family: 'Roboto', sans-serif;
+    }
+    footer a:hover {
+        color: rgb(240, 222, 84);
+    }
+
+    /* Esta seria la Media Querie que define el comportamiento responsive */
+    @media (max-width: 1024px) {
+        nav ul {
+            flex-wrap: wrap;
+            gap: var(--gap-medium);
+        }
+    }
+
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+        }
+        .inicio h2 {
+            font-size: 2.5em;
+        }
+        .inicio p {
+            font-size: 1.2em;
+        }
+        .productos-container {
+            flex-direction: column;
+            align-items: center; 
+            /* 
+            con esto los logos a los lados estan centrados para pantallas mas 
+            pequeñas haciendolo responsive tanto para móviles como para escritorio
+            */
+    }
+
+    @media (max-width: 480px) {
+        .inicio h2 {
+            font-size: 2em;
+        }
+        .inicio p {
+            font-size: 1em;
+        }
+        .producto {
+            width: 90%; /* pero ocuparan casi todo el ancho */
+        }
+        #sobre-nosotros p {
+            font-size: 1em;
+        }
+        #contacto form {
+            padding: 1.5em;
+        }
+    } 
+    }

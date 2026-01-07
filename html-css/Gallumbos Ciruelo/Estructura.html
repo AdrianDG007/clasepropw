@@ -1,66 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallumbos Ciruelo</title>
+    <meta name="description" content="Ropa interior masculina de calidad con algodón 100% natural.">
+    <meta name="keywords" content="Ropa interior, masculina, algodón, comodidad, Gallumbos Ciruelo">
+    <meta name="author" content="Adrian Delgado">
+    <link rel="icon" href="assets/Logo de Gallumbos Ciruelo.png">
     <link rel="stylesheet" href="Presentacios.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 </head>
 <body>
+
     <header>
-        <h1 class="titulo">Gallumbos Ciruelo</h1>
-        <!--Se ha utilizado en h1 ya que es el título principal de la página.-->
-        <p class="eslogan">Clasicos por fuera,imbatibles por dentro</p>
-        <!--Para el eslogan es mejor utilizar un p ya que es un texto de acompañamiento al titulo-->
-        <img class="logo" src="assets/Logo de Gallumbos Ciruelo.png" alt="Logo de gallumbos Ciruelo">
-        
+        <div class="logo-container">
+            <img src="assets/Logo de Gallumbos Ciruelo.png" alt="Logo Gallumbos Ciruelo" class="logo">
+            <div>
+                <h1>Gallumbos Ciruelo</h1>
+                <p class="eslogan"><strong>Comodidad que se lleva por dentro</strong></p>
+            </div>
+            <img src="assets/Logo de Gallumbos Ciruelo.png" alt="Logo Gallumbos Ciruelo" class="logo">
+        </div>
     </header>
+
     <nav>
-                <ul>
-                <li><a href="#hero">Inicio</a></li>
-                <li><a href="#sobre-mi">Productos</a></li>
-                <li><a href="#proyectos">Coleccion</a></li>
-                <li><a href="#inscripcion">Inscripción</a></li>
-                <li><a href="#info">Sobre Nosotros</a></li>
-                </ul>
-        </nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#coleccion">Colección</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section id="hero">
-            <h2>Nuestros</h2>
-            <p>Descubre la mejor selección de gallumbos artesanales.</p>
+        <section id="inicio" class="inicio">
+            <h2>Bienvenido a Gallumbos Ciruelo</h2>
+            <p>La linea de ropa interior masculina, donde 
+            <strong>comodidad</strong> con <strong>nuestras Raices</strong>.</p>
         </section>
 
-        <section id="sobre-mi">
-            <h2>Nuestros Productos</h2>
-            <p>Explora nuestra variedad de gallumbos, hechos con ingredientes de la más alta calidad.</p>
+        <section id="sobre-nosotros">
+            <h2>Sobre Gallumbos Ciruelo</h2>
+            <p>Gallumbos Ciruelo es una marca de ropa interior masculina que combina <strong>comodidad</strong>
+             y <strong>nuestro productos nacionales</strong>. 
+            Dirigida a hombres que buscan calidad y diseño ergonómico.
+            Diferenciados por nuestra atención al detalle haciendonos una de las mejores empresas a la hora de usar
+            <strong>algodón 100% natural</strong>.
+            </p>
+        </section>
+        <section id="productos">
+            <h2>Nuestra Colección</h2>
+            <div class="productos-container">
+                <article class="producto">
+                    <img src="assets/Calzones-Clasicos.png" alt="Modelo Clásico">
+                    <h3>Clásico</h3>
+                    <p> 
+                        Los clasicos de siempre, algodón suave y resistente.
+                        <strong>De nuestras raices</strong> y <strong>clasicos</strong>
+                        a lo mas importante.
+                    </p>
+                    
+                    <p class="precio">3x15€</p>
+                </article>
+                <article class="producto">
+                    <img src="assets/Calzones-Sport.png" alt="Modelo Deportivo">
+                    <h3> Deportivo</h3>
+                    <p>Ideal para deportistas de elite, con ajuste ergonómico.
+                    <strong>Antirrozaduras</strong> o <strong>incomodidasdes</strong><br>
+                    gracias a sus costuras invisibles.
+                    </p>
+                    <p class="precio">3x18€</p>
+                </article>
+                <article class="producto">
+                    <img src="assets/Calzones-Premium.png" alt="Modelo Premium">
+                    <h3>Premium</h3>
+                    <p>Lo mas lujoso con hecho con el <strong>mejor</strong> algodón recolectado
+                        en españa hechos con <strong> el maximo detalle</strong>
+                        junto al algodón 100% orgánico es lo mejor para los mejores
+                    </p>
+                    <p class="precio">3x25€</p>
+                </article>
+            </div>
         </section>
 
-        <section id="proyectos">
-            <h2>Colección Exclusiva</h2>
-            <p>Conoce nuestra colección exclusiva de gallumbos, diseñados para los paladares más exigentes.</p>
+        <section class="destacada">
+            <h2>Ventaja de la Marca</h2>
+            <p>Algodón 100% natural, diseño ergonómico y fabricado en España.</p>
         </section>
 
-        <section id="inscripcion">
-            <h2>Inscríbete en Nuestro Boletín</h2>
-            <form action="#" method="post">
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form>
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
 
-                <label for="email">Correo Electrónico:</label>
+                <label for="email">Correo electrónico:</label>
                 <input type="email" id="email" name="email" required>
 
-                <button type="submit">Suscribirse</button>
+                <label for="consulta">Tipo de consulta:</label>
+                <select id="consulta" name="consulta">
+                    <option value="producto">Producto</option>
+                    <option value="pedido">Pedido</option>
+                    <option value="Quejas">Quejas</option>
+                    <option value="otros">Otros</option>
+                </select>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
             </form>
         </section>
-
-        <section id="info">
-            <h2>Sobre Nosotros</h2>
-            <p>Somos una marca dedicada a la elaboracion de productos <b>confortables</b> para todo hombre,
-                combinado los mejores <b>materiales españoles</b> con un diseño ergonomico pensado para la
-                comodidad diaria.
-            </p>
-        </section>
     </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; <span id="year">2026</span> Gallumbos Ciruelo. Todos los derechos reservados.</p>
+        <p><a href="#inicio">Volver al inicio</a></p>
+        <p>Autor: Adrian Delgado</p>
+    </footer>
+
+  
 </body>
 </html>
