@@ -1,0 +1,44 @@
+package model;
+
+public class Profesor extends Persona{
+    private int salario,nExperiencia;
+    public Profesor () {}
+
+    public Profesor(String nombre, String apellido, int salario) {
+        super(nombre, apellido);
+        this.salario = salario;
+    }
+
+    public Profesor(String nombre, String apellido, int salario, int nExperiencia) {
+        super(nombre, apellido);
+        this.nExperiencia = nExperiencia;
+        this.salario = salario;
+    }
+    public void corregirExamen () {
+        System.out.println("Procedo a corregir los exámenes de los alumnos");
+    }
+    public void saludar() {
+        System.out.println("Vamos a saludar, soy un profesor");
+    }
+
+    @Override
+    public void mostrarDatos() {
+        super.mostrarDatos();
+    }
+
+    public int getSalario() {
+        return salario;
+    }
+
+    public void setSalario(int salario) {
+        this.salario = salario;
+    }
+
+    public int getnExperiencia() {
+        return nExperiencia;
+    }
+
+    public void setnExperiencia(int nExperiencia) {
+        this.nExperiencia = nExperiencia;
+    }
+}

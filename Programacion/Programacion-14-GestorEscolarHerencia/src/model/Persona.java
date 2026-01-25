@@ -1,0 +1,39 @@
+package model;
+
+public abstract class Persona {
+
+    private String nombre, apellido;
+
+    // TODO: me olvido del constructor vacío -> mas adelante
+
+    // solo un construcor
+    public Persona () {}
+    public Persona (String nombre, String apellido ) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
+    // TODO: darle una vuelta de abtraccion
+
+    public abstract void saludar ();
+    public void mostrarDatos( ){
+        System.out.println("Nombre = " + nombre);
+        System.out.println("Apellido = " + apellido);
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+}
