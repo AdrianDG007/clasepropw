@@ -1,6 +1,6 @@
 package model;
 
-public class Alumno extends Persona {
+public class Alumno extends Persona implements Manifestable {
     private int nMatricula;
     private String curso;
     //1 -> vaico
@@ -15,14 +15,19 @@ public class Alumno extends Persona {
         this.curso = curso;
     }
     @Override
-    public void saludar() {
-        System.out.println("Soy un Alumno y voy a aprender un monton");
+    public void saludar () {
+        System.out.println ("Voy a aprender un monton");
     }
     @Override
     public void mostrarDatos() {
-        System.out.println("nMatricula = " + nMatricula);
-        super.mostrarDatos();
-        System.out.println("cuso = " + curso);;
+        System.out.println ("nMatricula = " + nMatricula);
+        System.out.println ("cuso = " + curso);;
+        super.mostrarDatos ();
+    }
+    public void  realizarExame () {
+        System.out.println("Vmoas a realizar el examen");
+        int nota = (int) (Math.random () * 11);
+        System.out.println("La nota del examen ha sido " + nota);
     }
     public int getnMatricula() {
         return nMatricula;
@@ -36,7 +41,6 @@ public class Alumno extends Persona {
     public void setCurso(String curso) {
         this.curso = curso;
     }
-
-    public void realizarExamen() {
-    }
+    @Override
+    public void manifestar() {}
 }

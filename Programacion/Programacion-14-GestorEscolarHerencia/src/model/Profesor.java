@@ -23,7 +23,9 @@ public class Profesor extends Persona{
 
     @Override
     public void mostrarDatos() {
+        System.out.println("salario = " + salario);
         super.mostrarDatos();
+        System.out.println("nExperiencia = " + nExperiencia);
     }
 
     public int getSalario() {
