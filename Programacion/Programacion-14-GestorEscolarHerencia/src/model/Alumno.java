@@ -36,4 +36,7 @@ public class Alumno extends Persona {
     public void setCurso(String curso) {
         this.curso = curso;
     }
+
+    public void realizarExamen() {
+    }
 }
