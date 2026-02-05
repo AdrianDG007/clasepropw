@@ -61,7 +61,7 @@ public class Fijo extends Profesor implements  Inspector, Manifestable{
     }
 
     @Override
-    public void rrealizarInspeccion ( int nivel) {
+    public void realizarInspeccion ( int nivel) {
         System.out.println ("Vamos a inspeccionar");
         System.out.println ("Soy fijo por lo tanto soy un poco laxo, el nivel que aplico es " + nivel / 2);
     }

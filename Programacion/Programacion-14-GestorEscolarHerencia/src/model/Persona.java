@@ -16,24 +16,25 @@ public abstract class Persona {
     // TODO: darle una vuelta de abtraccion
 
     public abstract void saludar ();
-    public void mostrarDatos( ){
-        System.out.println("Nombre = " + nombre);
-        System.out.println("Apellido = " + apellido);
+
+    public void mostrarDatos (){
+        System.out.println ("Nombre = " + nombre);
+        System.out.println ("Apellido = " + apellido);
     }
 
-    public String getNombre() {
+    public String getNombre () {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre (String nombre) {
         this.nombre = nombre;
     }
 
-    public String getApellido() {
+    public String getApellido () {
         return apellido;
     }
 
-    public void setApellido(String apellido) {
+    public void setApellido (String apellido) {
         this.apellido = apellido;
     }
 }
