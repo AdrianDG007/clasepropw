@@ -1,0 +1,3 @@
+console.log ("esto es un texto" + "y esto es otro texto");
+console.log ('esto es un texto' + `y esto es otro texto`);
+console.log (`esto es un texto` + "y esto es otro texto");

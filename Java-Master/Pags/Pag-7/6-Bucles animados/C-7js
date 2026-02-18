@@ -1,0 +1,12 @@
+let frutas = ["Pomelo", "Pera", "Manazana","Naranja","Mandarian"]
+
+let frutrasLength = [];
+
+for ( let i = 0; i < frutas.length; i++ ){
+    let fruta = frutas[i]
+    for (let j = 0; j <= frutas.length; j++) {
+        frutrasLength [i] = j
+    }
+}
+
+console.log (frutrasLength);

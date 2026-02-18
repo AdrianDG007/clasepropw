@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "name_file.js" defer></script>
+    <title>Enlazar JS</title>
+</head>
+<body>
+    <button>Saludar</button>
+    <script>
+        const button = document.querySelector ("button");
+        const doTsk = () => alert ("Hello!");
+        button.setAttribute ("onclick","doTask ()")
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+function pokemonAttackParams (name, attack = "Ataque arena"){
+    console.log (`¡ ${name} ${attack}!`)
+}
+
+console.log ( pokemonAttackParams ("Onix") ); // ¡Onix Ataque arena!

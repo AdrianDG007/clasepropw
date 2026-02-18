@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "name_file.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <p>Justo debajo encontramos un botón. Prueba a pulsarlo. </p>
+    <button id = "btn">Púlsame</button>
+
+    <script>
+        let handleClick = function (event) {
+            console.log (event);
+        };
+        document.getElementById ("btn").addEventListener ("click", handleClick);
+    </script>
+</body>
+</html>

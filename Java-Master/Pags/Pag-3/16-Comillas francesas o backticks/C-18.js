@@ -1,0 +1,1 @@
+console.log(`El usuario ${name} que tiene ${age} años, tiene ${cats} gatos, el primero se llama ${cat1}, el segundo ${cat2} y el tercero ${cat3}`);

@@ -1,0 +1,1 @@
+let elementos = [1,Manzana,true,{color: "azul"},9.34];

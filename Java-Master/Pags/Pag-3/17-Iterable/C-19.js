@@ -1,0 +1,1 @@
+let frase = "esto es una frase cualquiera";
