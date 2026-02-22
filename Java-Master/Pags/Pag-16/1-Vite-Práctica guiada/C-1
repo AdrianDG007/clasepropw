@@ -1,0 +1,9 @@
+npm create vite@latest
+
+✔ Project name: color-flipper
+✔ Select a framework: › vanilla
+✔ Select a variant: › javascript 
+
+cd color-flipper
+npm install
+npm run dev

@@ -1,1 +1,0 @@
-const fechaActual = new Date ();
